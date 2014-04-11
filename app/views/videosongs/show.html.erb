@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Video url:</strong>
+  <%= @videosong.video_url %>
+</p>
+
+<p>
+  <strong>Song url:</strong>
+  <%= @videosong.song_url %>
+</p>
+
+<p>
+  <strong>Likes:</strong>
+  <%= @videosong.likes %>
+</p>
+
+<%= link_to 'Edit', edit_videosong_path(@videosong) %> |
+<%= link_to 'Back', videosongs_path %>
