@@ -17,6 +17,4 @@ class StaticPagesController < ApplicationController
  	@audio = audio_videos[n]
  	@video = visual_videos[m]	
   end
-  def testpage
-  end
 end
