@@ -38,6 +38,8 @@ gem 'giphy', '~> 1.0.1'
 
 gem 'youtube_it', '~> 2.4.0'
 
+gem 'gon', '~> 5.0.4'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
