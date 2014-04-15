@@ -19,10 +19,10 @@
         again
       </a>
       <%
-      rand_gif = Giphy.random
-      rand_gif = rand_gif.image_original_url
+      #srand_gif = @gif
+      #rand_gif = srand_gif.image_original_url
       %>
-      <img src = "<%=rand_gif%>" style = "width: auto; height: 70%">
+      <img src = "<%=@gif_url%>" style = "width: auto; height: 70%">
     </div>
     </center>
   </body>
