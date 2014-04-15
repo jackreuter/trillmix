@@ -1,31 +1,30 @@
+<!DOCTYPE html>
 <html>
 <head>
-	<title>Trillmix</title>
-	<script src = "https://www.google.com/jsapi"></script>
-	<script src = "https://www.youtube.com/iframe_api"></script>
+  <title>Trillmix</title>
+  <%= include_gon %>
+  <%= stylesheet_link_tag    "theatre", media: "all" %>
+  <%= javascript_include_tag "theatre" %>
+  <%= csrf_meta_tag %>
 </head>
-<body>
-<h1>Trillmix videos</h1>
-<p>Find me in app/views/static_pages/theatre.html.erb</p>
-<%=
-	# => video.title
-%>
-<% 
-	vid_id = @video.video_id[-11..-1] 
-	url = "http://www.youtube.com/embed/" + vid_id + "?autoplay=1"
-%>
-<div style = "width: 100%; text-align: center">
-	<iframe width="550" height="345" src="<%= url %>" style = "display: none">
-	</iframe>
-	<a href  = "" style ="display: block">
-		Again
-	</a>	
-	<%
-		rand_gif = Giphy.random 
-		rand_gif = rand_gif.image_original_url.to_s
-	%>
-	<img src = "<%=rand_gif%>" style = "width: 70%; height: auto">
-</div>
-
-</body>
+  <body>
+    <center>
+    <h1>Trillmix videos<h1/>
+    <div id="audio" style = 'display: none'></div>
+    <div style = "width: 100%; height: 100%; text-align: center">
+      <a href = "../" style = "display:block">
+        home
+      </a>
+      <a href="javascript:history.go(0)" style = "display:block">
+        again
+      </a>
+      <%
+      #srand_gif = @gif
+      #rand_gif = srand_gif.image_original_url
+      %>
+      <img src = "<%=@gif_url%>" style = "width: auto; height: 70%">
+    </div>
+    </center>
+  </body>
+</html>
 </html>

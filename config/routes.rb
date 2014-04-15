@@ -1,6 +1,7 @@
 Trillmix::Application.routes.draw do
   get "static_pages/theatre"
   get "static_pages/video_theatre"
+  root :to => "static_pages#home"
   
   resources :videosongs
 
