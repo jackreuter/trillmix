@@ -18,6 +18,7 @@ function onYouTubeIframeAPIReady() {
           videoId: vid_id,
           events: {
             'onReady': onVideoReady,
+            'onStateChange': onVidStateChange
           }
         });
 	      aud_player = new YT.Player('audio', {
@@ -25,7 +26,7 @@ function onYouTubeIframeAPIReady() {
           width: '640',
           videoId: aud_id,
           events: {
-            'onReady': onAudioReady,
+            'onReady': onAudioReady
           }
         });
       }
@@ -40,4 +41,11 @@ function onAudioReady(event) {
 		event.target.setVolume(100);
 		event.target.playVideo();
       }
+
+function onVidStateChange(event) {
+  if (event.data == YT.PlayerState.ENDED){
+    event.target.stopVideo();
+  }
+
+}
 
