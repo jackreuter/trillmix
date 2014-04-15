@@ -1,5 +1,4 @@
 var aud_id = gon.aud_id;
-
 var tag = document.createElement('script');
 
 tag.src = "https://www.youtube.com/iframe_api";
@@ -16,27 +15,17 @@ function onYouTubeIframeAPIReady() {
           videoId: aud_id,
           playerVars: { 'controls': 0 },
           events: {
-            'onReady': onPlayerReady,
-            'onStateChange': onPlayerStateChange
+            'onReady': onAudReady,
           }
         });
       }
 
       // 4. The API will call this function when the video player is ready.
-function onPlayerReady(event) {
+function onAudReady(event) {
 		event.target.setVolume(100);
 		event.target.playVideo();
       }
 
-      // 5. The API calls this function when the player's state changes.
-      //    The function indicates that when playing a video (state=1),
-      //    the player should play for six seconds and then stop.
-var done = false;
-function onPlayerStateChange(event) {
-        if (event.data == YT.PlayerState.PLAYING && !done) {
-          done = true;
-        }
-      }
 function stopVideo() {
 	aud_player.stopVideo();
 }

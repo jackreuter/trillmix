@@ -13,8 +13,8 @@ var vid_player;
 var aud_player;
 function onYouTubeIframeAPIReady() {
 	      vid_player = new YT.Player('video', {
-          height: '390',
-          width: '640',
+          height: '560',
+          width: '920',
           videoId: vid_id,
           events: {
             'onReady': onVideoReady,

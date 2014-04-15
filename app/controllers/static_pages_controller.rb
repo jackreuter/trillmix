@@ -19,4 +19,6 @@ class StaticPagesController < ApplicationController
   gon.aud_id = @audio.video_id[-11..-1]
   gon.vid_id = @video.video_id[-11..-1]
   end
+  def home
+  end
 end
