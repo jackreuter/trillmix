@@ -1,24 +1,27 @@
+<!DOCTYPE html>
 <html>
 <head>
-	<title>Trillmix</title>
-	<script src = "https://www.google.com/jsapi"></script>
-	<script src = "https://www.youtube.com/iframe_api"></script>
+  <title>Trillmix</title>
+  <%= include_gon %>
+  <%= stylesheet_link_tag "video_theatre", media: "all"%>
+  <%= javascript_include_tag "video_theatre"%>
+  <%= csrf_meta_tag %>
+
 </head>
-<body>
-<h1>Trillmix videos</h1>
-<p>Find me in app/views/static_pages/video_theatre.html.erb</p>
-</body>
-<%= @video %>
-<br>
-<%= @audio %>
-<% 
-	audio_id = @audio.video_id[-11..-1]
-	video_id = @video.video_id[-11..-1] 
-	audio_url = "http://www.youtube.com/embed/" + audio_id + "?autoplay=1"
-	video_url = "http://www.youtube.com/embed/" + video_id + "?autoplay=1"
-%>
-	<iframe width="550" height="345" src="<%= audio_url %>" style = "display: none">
-	</iframe>
-	<iframe width="550" height="345" src="<%= video_url %>">
-	</iframe>
+  <body>
+  	<center>
+    <h1>Trillmix videos<h1/>
+    <div style = "width: 100%; text-align: center">
+      <a href = "/static_pages/theatre" style = "display: block">
+        gif
+      </a>
+      <a href = "" style = "display:block">
+        video
+      </a>
+    </div>
+    <div id="video"></div>
+    <div id="audio" style = "display:none"></div>
+	</center>
+  </body>
+</html>
 </html>

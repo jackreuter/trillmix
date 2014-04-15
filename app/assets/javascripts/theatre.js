@@ -1,5 +1,4 @@
-
-var id = gon.vid_id;
+var aud_id = gon.aud_id;
 
 var tag = document.createElement('script');
 
@@ -9,12 +8,12 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
       // 3. This function creates an <iframe> (and YouTube player)
       //    after the API code downloads.
-var player;
+var aud_player;
 function onYouTubeIframeAPIReady() {
-	      player = new YT.Player('player', {
+	      aud_player = new YT.Player('audio', {
           height: '390',
           width: '640',
-          videoId: id,
+          videoId: aud_id,
           playerVars: { 'controls': 0 },
           events: {
             'onReady': onPlayerReady,
@@ -39,5 +38,6 @@ function onPlayerStateChange(event) {
         }
       }
 function stopVideo() {
-	player.stopVideo();
+	aud_player.stopVideo();
 }
+
