@@ -1,14 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Trillmix</title>
-  <%= include_gon %>
-  <%= stylesheet_link_tag "video_theatre", media: "all"%>
-  <%= javascript_include_tag "video_theatre"%>
-  <%= csrf_meta_tag %>
+<%= render 'layouts/navbar' %>  
 
-</head>
-  <body>
   	<center>
     <h1>Trillmix videos<h1/>
     <div style = "width: 100%; text-align: center">
@@ -22,6 +13,4 @@
     <div id="video"></div>
     <div id="audio" style = "display:none"></div>
 	</center>
-  </body>
-</html>
-</html>
+

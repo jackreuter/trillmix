@@ -12,7 +12,7 @@ class StaticPagesController < ApplicationController
     gifs = Giphy.search(gif_query, {limit: 50, offset:25})
     m = rand(10)
     gif = gifs[m]
-    @gif_url = "http://media.giphy.com/media/" + gif.id() + "/giphy.gif"
+    @gif_url = "http://media.giphy.com/media/" + gif.id + "/giphy.gif"
   end
   def video_theatre
   	@youtube_dev_key = "AI39si6_Eb75Wn08iBW2tQbPhzYEKuFuu1tBu_wF2QdcitIJz7rRVeZu4Z-MqvuRyyfjgaqXOWsSuT7LgWcLVaEh1oOS1vg1RA"

@@ -1,0 +1,61 @@
+@import 'bootstrap';
+
+/* Home page */
+
+.navbar{
+	margin-bottom: 0px;
+	border-radius: 0px;
+}
+.home-header{
+	margin-top: 170px;
+	font-family: "Braggadocio";
+}
+@media(min-width: 992px){
+	.home-header{
+		font-size: 130px !important;
+	}
+}
+@media(min-width:768px) and (max-width: 992px){
+	.home-header{
+		font-size: 95px !important;
+	}
+}
+
+.home-jumbotron{
+	background-color: black;
+	color: white;
+	height: 600px;
+	margin-bottom: 0px;
+	text-align: center;
+}
+h1{
+}
+.kieran-gif{
+	height: 150px;
+	width: auto;
+	position: absolute;
+	top: 31px;
+	left: 230px;
+}
+.jack-gif{
+	height: 150px; 
+	width: auto; 
+	position: absolute;
+	top: 30px;
+	left: 530px;
+}
+.neil-gif{
+	height: 150px; 
+	width: auto; 
+	position: absolute;
+	top: 30px;
+	left: 843px;
+}
+.gif-button, .video-button{
+	background-color: black;
+	border-color: rgba(255, 255, 255, 0.35);
+	color: white;
+	margin-top: 50px;
+	font-family: sans-serif;
+}
+

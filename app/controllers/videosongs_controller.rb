@@ -1,4 +1,4 @@
-class VideosongsController < ApplicationController
+  class VideosongsController < ApplicationController
   before_action :set_videosong, only: [:show, :edit, :update, :destroy]
 
   # GET /videosongs

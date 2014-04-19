@@ -30,7 +30,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 group :doc do
-  # bundle exec rake doc:rails generates the API under doc/api.
+  # bundle exec rake doc:rails generates the API under deployment/api.
   gem 'sdoc', require: false
 end
 
@@ -39,6 +39,8 @@ gem 'giphy', '~> 1.0.1'
 gem 'youtube_it', '~> 2.4.0'
 
 gem 'gon', '~> 5.0.4'
+
+gem 'bootstrap-sass', '~> 3.1.1.1'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
