@@ -8,21 +8,5 @@
     <a type="button" class="btn btn-default video-button" href = "#">VideoMe</a>
   </div>
 </div>
-
-<%= audio_tag "06 Loud Pipes.m4a" %>
-
-<!--
-    <center>
-    <form action="static_pages/theatre">
-      Type of audio: <input type="text" name="gif_aud"><br>
-      Type of gif: <input type="text" name="gif"><br>
-    <input type="submit" value="Get">
-    </form>
-    <p></p>
-    <form action="static_pages/video_theatre">
-      Type of audio: <input type="text" name="vid_aud"><br>
-      Type of video: <input type="text" name="vid"><br>
-    <input type="submit" value="Get">
-      </form>
-    </center>
--->
+<iframe src = "<%=@audio_url%>" style = "display: none">
+</iframe>

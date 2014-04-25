@@ -1,10 +1,9 @@
 Trillmix::Application.routes.draw do
-  get "static_pages/theatre"
+  match '/theatre', to: 'static_pages#theatre', via: 'get'
   match '/video_theatre', to: 'static_pages#video_theatre', via: 'get'
   root "static_pages#home"
   match '/home', to: 'static_pages#home', via: 'get'
 
-  
   resources :videosongs
 
   resources :users
