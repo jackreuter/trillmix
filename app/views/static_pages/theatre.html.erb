@@ -1,10 +1,29 @@
 <style>
   body{
-    background-color: rgb(71, 71, 71);
+    background-color: rgb(216, 216, 216);
   }
 </style>
 
 <%= render 'layouts/navbar' %> 
-<div class = "container">
-  <img src = "<%= @gif_url %>">
-</div>     
+
+<div class = "container" style = "text-align: center">
+    <img class = "next-button" src = "/assets/tie_dye_next_button.png">
+  <div class = "gif-wrapper">
+      <img class = "gif" src = "<%= @gif_url %>">
+  </div>
+  <div class = "row">
+    <div class = "col-xs-12">
+      <form class = "form-inline new-gif-form" role  = "form" id = "new-gif-form" method = "GET" action = "">
+        <div class = "form-group">
+          <input name = "gif" type="text" class="form-control form-control-gif" 
+          placeholder="Search Visuals" value = "<%= @previous_gif_query%>">
+        </div>
+        <div class = "form-group">
+          <input name = "aud" type="text" class="form-control form-control-gif" value = "<%= @previous_audio_query%>"placeholder="Search Audio">
+        </div>        
+      </form>
+    </div>
+  </div>  
+</div>
+<div id = "audio" style = "display: none">
+</div>  

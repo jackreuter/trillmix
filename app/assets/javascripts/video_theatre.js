@@ -1,4 +1,4 @@
-var vid_id = gon.vid_id;
+/*var vid_id = gon.vid_id;
 var aud_id = gon.aud_id;
 
 var tag = document.createElement('script');
@@ -49,3 +49,4 @@ function onVidStateChange(event) {
 
 }
 
+*/

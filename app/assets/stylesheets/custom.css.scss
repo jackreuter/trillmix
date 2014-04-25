@@ -11,7 +11,9 @@
 }
 .navbar-brand{
 	font-size: 25px;
+	color: white !important;
 }
+
 .T{
 	color: rgb(0,0,255);
 }
@@ -89,8 +91,33 @@ h1{
 	margin-top: 50px;
 	font-family: sans-serif;
 }
-
-
-
-
-
+.gif-wrapper{
+	margin: 0 auto;
+	width: 900px;
+	height: 500px;
+	margin-top: 20px;
+}
+.gif{
+	margin: 0 auto;
+	visibility: hidden;
+	width: 900px;
+	height: auto;
+	border: 1px solid rgba(255, 255, 255, .35);
+	box-shadow: 0px 0px 40px 2px black;
+}
+.new-gif-form{
+	margin-top: 30px;
+}
+.form-control-gif{
+	border-radius: 100px;
+	height: 28px;
+}
+.next-button{
+	width: 100px; 
+	height: 100px; 
+	float: right; 
+	margin-top: 220px;
+}
+.next-button:hover{
+	cursor: pointer;
+};

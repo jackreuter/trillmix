@@ -1,16 +1,29 @@
-<%= render 'layouts/navbar' %>  
+<style>
+  body{
+    background-color: rgb(216, 216, 216);
+  }
+</style>
 
-  	<center>
-    <h1>Trillmix videos<h1/>
-    <div style = "width: 100%; text-align: center">
-      <a href = "../" style = "display:block">
-        home
-      </a>
-      <a href="javascript:history.go(0)">
-        again
-      </a>
+<%= render 'layouts/navbar' %> 
+
+<div class = "container" style = "text-align: center">
+    <img class = "next-button" src = "/assets/tie_dye_next_button.png">
+  <div class = "gif-wrapper">
+      <img class = "gif" src = "<%= @gif_url %>">
+  </div>
+  <div class = "row">
+    <div class = "col-xs-12">
+      <form class = "form-inline new-gif-form" role  = "form" id = "new-gif-form" method = "GET" action = "">
+        <div class = "form-group">
+          <input name = "gif" type="text" class="form-control form-control-gif" 
+          placeholder="Search Visuals" value = "<%= @previous_video_query%>">
+        </div>
+        <div class = "form-group">
+          <input name = "gif_aud" type="text" class="form-control form-control-gif" value = "<%= @previous_audio_query%>"placeholder="Search Audio">
+        </div>        
+      </form>
     </div>
-    <div id="video"></div>
-    <div id="audio" style = "display:none"></div>
-	</center>
-
+  </div>  
+</div>
+<div id = "audio" style = "display: none">
+</div>  
