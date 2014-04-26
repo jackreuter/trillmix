@@ -169,7 +169,7 @@ PLATFORMS
 DEPENDENCIES
   bootstrap-sass (~> 3.1.1.1)
   coffee-rails (~> 4.0.1)
-  giphy!
+  giphy (= 1.0.1)!
   gon (~> 5.0.4)
   jbuilder (~> 1.2)
   jquery-rails (= 3.0.4)
