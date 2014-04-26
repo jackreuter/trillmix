@@ -34,7 +34,7 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-gem 'giphy', :path => './giphy'
+gem 'giphy', '1.0.1', :path => './giphy'
 
 gem 'youtube_it', '~> 2.4.0'
 
