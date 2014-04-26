@@ -1,4 +1,4 @@
-/*var vid_id = gon.vid_id;
+var vid_id = gon.vid_id;
 var aud_id = gon.aud_id;
 
 var tag = document.createElement('script');
@@ -13,8 +13,8 @@ var vid_player;
 var aud_player;
 function onYouTubeIframeAPIReady() {
 	      vid_player = new YT.Player('video', {
-          height: '560',
-          width: '920',
+          height: '500',
+          width: '900',
           videoId: vid_id,
           events: {
             'onReady': onVideoReady,
@@ -49,4 +49,3 @@ function onVidStateChange(event) {
 
 }
 
-*/
