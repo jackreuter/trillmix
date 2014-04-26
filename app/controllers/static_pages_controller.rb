@@ -29,7 +29,7 @@ class StaticPagesController < ApplicationController
         gif = gifs[n]
       end
       @gif_url = "http://media.giphy.com/media/" + gif.id + "/giphy.gif"
-      @previous_gif_query = params['gif']
+      @previous_gif_query = gif_query
     end
     #Audio
     @youtube_dev_key = "AI39si6_Eb75Wn08iBW2tQbPhzYEKuFuu1tBu_wF2QdcitIJz7rRVeZu4Z-MqvuRyyfjgaqXOWsSuT7LgWcLVaEh1oOS1vg1RA"
@@ -93,10 +93,10 @@ class StaticPagesController < ApplicationController
       #Kind of random
       n = rand(100)
       audio_query = params['aud']
-      @audio = client.videos_by(:categories => [:music], :query => params['aud'], :page => n, :per_page => 1).videos[0].video_id
+      @audio = client.videos_by(:categories => [:music], :query => audio_query, :page => n, :per_page => 1).videos[0].video_id
       @audio_id = @audio[-11..-1]
       gon.aud_id = @audio_id
-      @previous_audio_query = params['aud']
+      @previous_audio_query = audio_query
     end
   end
 
@@ -107,30 +107,29 @@ class StaticPagesController < ApplicationController
   	client = YouTubeIt::OAuth2Client.new(dev_key: @youtube_dev_key)
     #video
     if (params['vid'].nil? || params['vid']== "")
-      n = rand(4)
-      if (n = 0)
+      m = rand(4)
+      if (m == 0)
         video_query = "robots"
-      elsif (n=1)
+      elsif (m == 1)
         video_query = "extreme sports"
-      elsif (n=2)
+      elsif (m == 2)
         video_query = "psychadelic"
       else
         video_query = "soul train"
       end
       n = rand(50)
-      video_query = params['vid']
-      @video = client.videos_by(:query => params['vid'], :page => n, :per_page => 1).videos[0].video_id
+      @video = client.videos_by(:query =>  video_query, :page => n, :per_page => 1).videos[0].video_id
       @video_id = @video[-11..-1]
       gon.vid_id = @video_id
-      @previous_video_query = params['vid']
+      @previous_video_query =  ""
 
     else
       n = rand(100)
       video_query = params['vid']
-      @video = client.videos_by(:query => params['vid'], :page => n, :per_page => 1).videos[0].video_id
+      @video = client.videos_by(:query =>  video_query, :page => n, :per_page => 1).videos[0].video_id
       @video_id = @video[-11..-1]
       gon.vid_id = @video_id
-      @previous_video_query = params['vid']
+      @previous_video_query = video_query
     end
 
 
@@ -196,10 +195,10 @@ class StaticPagesController < ApplicationController
       #Kind of random
       n = rand(100)
       audio_query = params['aud']
-      @audio = client.videos_by(:categories => [:music], :query => params['aud'], :page => n, :per_page => 1).videos[0].video_id
+      @audio = client.videos_by(:categories => [:music], :query => audio_query, :page => n, :per_page => 1).videos[0].video_id
       @audio_id = @audio[-11..-1]
       gon.aud_id = @audio_id
-      @previous_audio_query = params['aud']
+      @previous_audio_query = audio_query
     end  
   end
 end
