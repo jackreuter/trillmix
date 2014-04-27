@@ -94,6 +94,8 @@ GEM
       multi_xml (~> 0.5)
       rack (~> 1.2)
     oj (2.8.1)
+    pg (0.17.1)
+    pg (0.17.1-x86-mingw32)
     polyglot (0.3.4)
     rack (1.5.2)
     rack-test (0.6.2)
@@ -173,9 +175,11 @@ DEPENDENCIES
   gon (~> 5.0.4)
   jbuilder (~> 1.2)
   jquery-rails (= 3.0.4)
+  pg
   rails (= 4.0.2)
   sass-rails (~> 4.0.1)
   sdoc
+  sqlite3
   turbolinks
   uglifier (= 2.1.1)
   youtube_it (~> 2.4.0)
