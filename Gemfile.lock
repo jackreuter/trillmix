@@ -165,8 +165,7 @@ GEM
       webmock
 
 PLATFORMS
-  ruby
-  x86-mingw32
+  ruby '2.0.0'
 
 DEPENDENCIES
   bootstrap-sass (~> 3.1.1.1)
@@ -179,7 +178,6 @@ DEPENDENCIES
   rails (= 4.0.2)
   sass-rails (~> 4.0.1)
   sdoc
-  sqlite3
   turbolinks
   uglifier (= 2.1.1)
   youtube_it (~> 2.4.0)
