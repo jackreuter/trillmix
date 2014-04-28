@@ -47,6 +47,7 @@ gem 'gon', '~> 5.0.4'
 
 gem 'bootstrap-sass', '~> 3.1.1.1'
 
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 

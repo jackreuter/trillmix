@@ -1,3 +1,4 @@
+
 var vid_id = gon.vid_id;
 var aud_id = gon.aud_id;
 
@@ -21,7 +22,7 @@ function onYouTubeIframeAPIReady() {
             'onStateChange': onVidStateChange
           }
         });
-	      aud_player = new YT.Player('audio', {
+	      aud_player = new YT.Player('audio', {  
           height: '390',
           width: '640',
           videoId: aud_id,
