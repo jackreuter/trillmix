@@ -121,3 +121,26 @@ h1{
 .next-button:hover{
 	cursor: pointer;
 };
+.gif-control-wrapper{
+	border: 3px solid black; 
+	width: 150px; 
+	height: 40px; 
+	position: relative; 
+	border-radius: 50px; 
+	margin: 0 auto;
+}
+#pause-button{
+	font-size: 30px; 
+	color: black;
+}
+.pause-wrapper{
+	border: 5px solid black; 
+	width: 50px; 
+	height: 50px; 
+	border-radius: 50px;
+	padding: 6px 0px 0px 0px;
+	text-align: center;
+	margin: -8px auto 0px auto;
+	position: relative;
+	background-color: rgb(216, 216, 216);
+}
