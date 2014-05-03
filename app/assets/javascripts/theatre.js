@@ -13,11 +13,6 @@ function format_image(){
 
   }
 }
-$(document).ready(function(){
-  $(".next-button").click(function(){
-    $("#new-gif-form").submit();
-  })
-})
 
 $(window).load(function(){format_image()});
 

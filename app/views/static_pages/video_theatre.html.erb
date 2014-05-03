@@ -13,13 +13,13 @@
   </div>
   <div class = "row">
     <div class = "col-xs-12">
-      <form class = "form-inline new-gif-form" role  = "form" id = "new-gif-form" method = "GET" action = "">
+      <form class = "form-inline new-random-content-form" role  = "form" method = "GET" action = "">
         <div class = "form-group">
-          <input name = "vid" type="text" class="form-control form-control-gif" 
+          <input name = "vid" type="text" class="form-control form-control-new-random-content" 
           placeholder="Search Visuals" value = "<%= @previous_video_query%>">
         </div>
         <div class = "form-group">
-          <input name = "aud" type="text" class="form-control form-control-gif" value = "<%= @previous_audio_query %>"placeholder="Search Audio">
+          <input name = "aud" type="text" class="form-control form-control-new-random-content" value = "<%= @previous_audio_query %>"placeholder="Search Audio">
         </div>        
       </form>
     </div>

@@ -12,6 +12,7 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
       //    after the API code downloads.
 var vid_player;
 var aud_player;
+
 function onYouTubeIframeAPIReady() {
 	      vid_player = new YT.Player('video', {
           height: '500',
@@ -27,7 +28,7 @@ function onYouTubeIframeAPIReady() {
           width: '640',
           videoId: aud_id,
           events: {
-            'onReady': onAudioReady
+            'onReady': onAudioReady,
           }
         });
       }
@@ -35,18 +36,94 @@ function onYouTubeIframeAPIReady() {
       // 4. The API will call this function when the video player is ready.
 function onVideoReady(event) {
 		event.target.setVolume(0);
-		event.target.playVideo();
-      }
+		event.target.playVideo()
+
+}
 
 function onAudioReady(event) {
-		event.target.setVolume(100);
-		event.target.playVideo();
-      }
+	event.target.setVolume(100);
+	event.target.playVideo();
+
+  var pauseButton = document.getElementById("pause-button");
+  pauseButton.addEventListener("click", function() {
+    if (event.target.getPlayerState() == 1)
+    {
+      event.target.pauseVideo();
+      $("#pause-button").removeClass("fa-pause");
+      $("#pause-button").addClass("fa-play");
+      $(".pause-wrapper").css({"padding": "6px 0px 0px 5px"});
+    }
+    else if (event.target.getPlayerState() == 2)
+    {
+      event.target.playVideo();
+      $("#pause-button").removeClass("fa-play");
+      $("#pause-button").addClass("fa-pause");
+      $(".pause-wrapper").css({"padding": "6px 0px 0px 0px"});      
+    }
+  });
+
+}
 
 function onVidStateChange(event) {
   if (event.data == YT.PlayerState.ENDED){
     event.target.stopVideo();
   }
-
+  if (event.target.getPlayerState() == 2)
+  {
+    aud_player.pauseVideo();
+  }
+  if (event.target.getPlayerState() == 1)
+  {
+    aud_player.playVideo();
+  }
 }
+
+$(document).ready(function(){
+  $(".next-button").click(function(){
+    $(".new-random-content-form").submit();
+  })
+})
+
+function submit_on_enter(object){
+  object.keypress(function(event) {
+    if (event.which == 13)
+    {
+      $(".new-random-content-form").submit();
+    }
+  });
+}
+
+$(document).ready(function() {
+  submit_on_enter($(".form-control-new-random-content"))
+  }
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

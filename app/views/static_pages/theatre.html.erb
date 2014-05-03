@@ -13,13 +13,22 @@
   </div>
   <div class = "row">
     <div class = "col-xs-12">
-      <form class = "form-inline new-gif-form" role  = "form" id = "new-gif-form" method = "GET" action = "">
+      <div class = "gif-control-wrapper" style = "border: 3px solid black; width: 150px; height: 40px; position: relative; border-radius: 50px; margin: 0 auto">
+        <div class = "pause-wrapper" style = "border: 5px solid black; width: 50px; height: 50px; border-radius: 50px; padding: 6px 0px 0px 0px; text-align: center; margin: -8px auto 0px auto; position: relative; background-color: rgb(216, 216, 216)">
+          <i class="fa fa-pause" id = "pause-button" style = "font-size: 30px; color: black"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class = "row">
+    <div class = "col-xs-12">
+      <form class = "form-inline new-random-content-form" role  = "form" method = "GET" action = "">
         <div class = "form-group">
-          <input name = "gif" type="text" class="form-control form-control-gif" 
+          <input name = "gif" type="text" class="form-control form-control-new-random-content" 
           placeholder="Search Visuals" value = "<%= @previous_gif_query%>">
         </div>
         <div class = "form-group">
-          <input name = "aud" type="text" class="form-control form-control-gif" value = "<%= @previous_audio_query%>"placeholder="Search Audio">
+          <input name = "aud" type="text" class="form-control form-control-new-random-content" value = "<%= @previous_audio_query%>"placeholder="Search Audio">
         </div>        
       </form>
     </div>
