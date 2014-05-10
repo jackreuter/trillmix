@@ -14,5 +14,19 @@ function format_image(){
   }
 }
 
+function fullscreen(){
+  var elem = document.getElementById("gif");
+  req = elem.requestFullScreen || elem.webkitRequestFullScreen || elem.mozRequestFullScreen || elem.msRequestFullscreen;
+  req.call(elem);
+};
+
+
+
+$(window).load(function(){
+  $("#fullscreen-button").click(function(){
+    fullscreen();
+  })
+});
+
 $(window).load(function(){format_image()});
 

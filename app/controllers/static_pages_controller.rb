@@ -80,7 +80,7 @@ class StaticPagesController < ApplicationController
         audio_query = "kendrick lamar"
       elsif(m < 96)
         audio_query = "beach fossils"
-      els(m < 98)
+      elsif(m < 98)
         audio_query = "kanye"
       else
         audio_query = "ratatat"

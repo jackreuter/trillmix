@@ -9,13 +9,16 @@
 <div class = "container" style = "text-align: center">
     <img class = "next-button" src = "http://www.weswear.net/tie_dye_next_button.png">
   <div class = "gif-wrapper">
-      <img class = "gif" src = "<%= @gif_url %>">
+      <img id = "gif" class = "gif" src = "<%= @gif_url %>">
   </div>
-  <div class = "row">
+  <div class = "row" style = "margin-top: 15px">
     <div class = "col-xs-12">
-      <div class = "gif-control-wrapper">
-        <div class = "pause-wrapper">
+      <div class = "gif-control-wrapper"><div 
+        class = "pause-wrapper">
           <i class="fa fa-pause" id = "pause-button"></i>
+        </div><div 
+        class = "fullscreen-button-wrapper">
+          <i class = "fa fa-arrows-alt" id = "fullscreen-button"></i>
         </div>
       </div>
     </div>
