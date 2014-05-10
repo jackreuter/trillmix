@@ -52,13 +52,16 @@ function onAudioReady(event) {
       $("#pause-button").removeClass("fa-pause");
       $("#pause-button").addClass("fa-play");
       $(".pause-wrapper").css({"padding": "6px 0px 0px 5px"});
+      gif_src = $("#gif").attr('src')
+      $("#gif").attr('src', 'http://www.jlg.com/images/layout/loadingGif.gif')
     }
     else if (event.target.getPlayerState() == 2)
     {
       event.target.playVideo();
       $("#pause-button").removeClass("fa-play");
       $("#pause-button").addClass("fa-pause");
-      $(".pause-wrapper").css({"padding": "6px 0px 0px 0px"});      
+      $(".pause-wrapper").css({"padding": "6px 0px 0px 0px"});  
+      $("#gif").attr('src', gif_src);    
     }
   });
 

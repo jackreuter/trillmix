@@ -173,3 +173,18 @@ h1{
 	max-height: 100vH !important;
 	margin-top: 0px !important;
 }
+#gif:-moz-full-screen{
+	height: 100vH !important;
+	width: auto !important;
+	max-width: 100vW !important;
+	max-height: 100vH !important;
+	margin-top: 0px !important;
+}
+
+#gif:-ms-full-screen{
+	height: 100vH !important;
+	width: auto !important;
+	max-width: 100vW !important;
+	max-height: 100vH !important;
+	margin-top: 0px !important;
+}
