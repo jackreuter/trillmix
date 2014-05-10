@@ -53,7 +53,8 @@ function onAudioReady(event) {
       $("#pause-button").addClass("fa-play");
       $(".pause-wrapper").css({"padding": "6px 0px 0px 5px"});
       gif_src = $("#gif").attr('src')
-      $("#gif").attr('src', 'http://www.jlg.com/images/layout/loadingGif.gif')
+      $("#gif").attr('src', 'http://clipartist.info/www/COLOURINGBOOK.ORG/Letters/M/media_playback_pause_black_white_line_art_coloring_book_colouring-1331px.png')
+      $("#gif").addClass("paused")
     }
     else if (event.target.getPlayerState() == 2)
     {
@@ -62,6 +63,7 @@ function onAudioReady(event) {
       $("#pause-button").addClass("fa-pause");
       $(".pause-wrapper").css({"padding": "6px 0px 0px 0px"});  
       $("#gif").attr('src', gif_src);    
+      $("#gif").removeClass("paused")      
     }
   });
 
