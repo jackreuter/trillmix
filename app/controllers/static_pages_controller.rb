@@ -16,7 +16,6 @@ class StaticPagesController < ApplicationController
         gif = Giphy.random
       end
       @gif_url = "http://media.giphy.com/media/" + gif.id + "/giphy.gif"
-      @test = "no search"
       @previous_gif_query = ""
     else
       gif_query = params['gif']

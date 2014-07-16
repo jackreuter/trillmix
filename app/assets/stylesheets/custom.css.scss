@@ -1,7 +1,5 @@
 @import 'bootstrap';
 
-/* Home page */
-
 .navbar{
 	margin-bottom: 0px;
 	border-radius: 0px;
@@ -39,11 +37,16 @@
 	color: #9900FF;
 }
 
+@font-face{
+	font-family: myFirstFont;
+	src: url(ufonts.com_braggadocio__2_.ttf);
+}
 
 .home-header{
-	margin-top: 170px;
-	font-family: "Braggadocio";
+	margin-top: 179px;
+	font-family: myFirstFont;
 }
+
 @media(min-width: 992px){
 	.home-header{
 		font-size: 130px !important;
